@@ -1,6 +1,6 @@
 
-
-const BASE = "/api/journal";
+const API = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const BASE = `${API}/api/journal`;
 
 // Save a new journal entry
 export async function createEntry(userId, ambience, text) {
